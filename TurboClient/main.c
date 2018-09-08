@@ -7,9 +7,10 @@
 //
 
 #include <stdio.h>
+#include "tcpclient.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
+    StartTCPClient("192.168.0.100", 5200);
     return 0;
 }
