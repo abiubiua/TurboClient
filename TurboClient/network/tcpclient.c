@@ -102,7 +102,7 @@ int StartTCPClient(const char *ip, int port)
             int nwrite = 0;
             char what[1024] = {0};
             snprintf(what, sizeof(what), "i am from client %d", democnt++);
-            if ((nwrite = write(fd, what, strlen(what))) <= 0) {
+            if ((nwrite = (int)write(fd, what, strlen(what))) <= 0) {
                 printf("write error\n");
             }
         }
