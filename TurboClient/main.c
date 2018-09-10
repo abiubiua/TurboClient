@@ -11,6 +11,6 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    StartTCPClient("192.168.0.100", 5200);
+    StartTCPClient("10.116.34.147", 5200);
     return 0;
 }
