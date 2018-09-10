@@ -12,6 +12,6 @@
 #include <stdio.h>
 
 int StartTCPClient(const char *ip, int port);
-int StopTCPClient();
+int StopTCPClient(void);
 
 #endif /* tcpclient_h */
