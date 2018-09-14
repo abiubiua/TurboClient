@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32CE36CD2148B07000C016D5 /* udpclient.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE36CC2148B07000C016D5 /* udpclient.c */; };
 		32F4BCE6214410A00039093F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F4BCE5214410A00039093F /* main.c */; };
 		32F4BCEF214412130039093F /* tcpclient.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F4BCED214412130039093F /* tcpclient.c */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		32CE36CB2148B07000C016D5 /* udpclient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = udpclient.h; sourceTree = "<group>"; };
+		32CE36CC2148B07000C016D5 /* udpclient.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = udpclient.c; sourceTree = "<group>"; };
+		32CE36D22148B33F00C016D5 /* utils */ = {isa = PBXFileReference; lastKnownFileType = folder; path = utils; sourceTree = "<group>"; };
+		32CE36D32148B3CB00C016D5 /* commoninclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commoninclude.h; sourceTree = "<group>"; };
 		32F4BCE2214410A00039093F /* TurboClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TurboClient; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F4BCE5214410A00039093F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		32F4BCED214412130039093F /* tcpclient.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tcpclient.c; sourceTree = "<group>"; };
@@ -60,6 +65,7 @@
 		32F4BCE4214410A00039093F /* TurboClient */ = {
 			isa = PBXGroup;
 			children = (
+				32CE36D22148B33F00C016D5 /* utils */,
 				32F4BCEC214411F40039093F /* network */,
 				32F4BCE5214410A00039093F /* main.c */,
 			);
@@ -69,8 +75,11 @@
 		32F4BCEC214411F40039093F /* network */ = {
 			isa = PBXGroup;
 			children = (
+				32CE36D32148B3CB00C016D5 /* commoninclude.h */,
 				32F4BCED214412130039093F /* tcpclient.c */,
 				32F4BCEE214412130039093F /* tcpclient.h */,
+				32CE36CB2148B07000C016D5 /* udpclient.h */,
+				32CE36CC2148B07000C016D5 /* udpclient.c */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32F4BCEF214412130039093F /* tcpclient.c in Sources */,
+				32CE36CD2148B07000C016D5 /* udpclient.c in Sources */,
 				32F4BCE6214410A00039093F /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TurboClient/utils/log\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -255,6 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TurboClient/utils/log\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
